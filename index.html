@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DATASETTINGS by sugaheavenâ€™s</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Typography Khusus */
+        .font-times {
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        /* Custom Styling & Border */
+        .border-black-thick {
+            border: 2px solid #000000;
+        }
+
+        /* Smooth Fade Transitions */
+        .tab-content {
+            transition: opacity 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-white text-black min-h-screen flex flex-col justify-between items-center font-sans p-4 sm:p-6">
+
+    <!-- Container Utama App (Mobile First Max Width) -->
+    <main class="w-full max-w-md mx-auto flex-1 flex flex-col justify-center my-auto">
+
+        <!-- ================= TAB 1: LOGIN ================= -->
+        <section id="loginTab" class="w-full flex flex-col items-center text-center space-y-6">
+            
+            <!-- Header Welcome -->
+            <div class="space-y-2">
+                <h1 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-black">
+                    Selamat Datang di DataSettings
+                </h1>
+                <p class="text-sm font-semibold text-gray-600">
+                    by <span class="text-black font-bold">sugaheavenâ€™s</span>
+                </p>
+            </div>
+
+            <!-- Card Box Form Login -->
+            <div class="w-full border-2 border-black rounded-2xl p-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] bg-white space-y-4">
+                
+                <form id="loginForm" onsubmit="handleLogin(event)" class="space-y-4 text-left">
+                    <!-- Input Username -->
+                    <div>
+                        <label for="username" class="block text-xs font-bold uppercase tracking-wider mb-1 text-black">Username</label>
+                        <input 
+                            type="text" 
+                            id="username" 
+                            required 
+                            placeholder="Masukkan username (contoh: hz)"
+                            class="w-full px-4 py-3 rounded-xl border-2 border-black focus:outline-none focus:ring-2 focus:ring-black text-black placeholder-gray-400 font-medium bg-white"
+                        />
+                    </div>
+
+                    <!-- Input Key -->
+                    <div>
+                        <label for="accessKey" class="block text-xs font-bold uppercase tracking-wider mb-1 text-black">Masukan Key</label>
+                        <input 
+                            type="text" 
+                            id="accessKey" 
+                            required 
+                            placeholder="Masukkan Key Access"
+                            class="w-full px-4 py-3 rounded-xl border-2 border-black focus:outline-none focus:ring-2 focus:ring-black text-black placeholder-gray-400 font-mono bg-white uppercase"
+                        />
+                    </div>
+
+                    <!-- Tombol Login -->
+                    <button 
+                        type="submit" 
+                        class="w-full py-3 mt-2 rounded-xl border-2 border-black bg-white text-black font-bold hover:bg-black hover:text-white active:scale-[0.98] transition-all duration-200 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]"
+                    >
+                        LOGIN
+                    </button>
+                </form>
+
+                <!-- Link Contact Admin WhatsApp -->
+                <div class="pt-3 border-t border-dashed border-black/30 text-center">
+                    <a 
+                        href="https://wa.me/628138338733" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        class="inline-flex items-center space-x-1.5 text-xs font-bold text-black hover:underline cursor-pointer py-1 px-3 rounded-lg hover:bg-gray-100 transition-colors"
+                    >
+                        <span>No key? Contact admin</span>
+                        <svg class="w-3.5 h-3.5 text-emerald-600" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
+                        </svg>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ================= TAB 2: DASHBOARD UTAMA ================= -->
+        <section id="dashboardTab" class="w-full hidden flex-col items-center text-center space-y-5 py-4">
+            
+            <!-- Logo & Title Section (Sesuai Foto ke-2) -->
+            <div class="flex flex-col items-center space-y-1">
+                <!-- SVG Folder Logo Persis Foto 2 -->
+                <svg class="w-20 h-20 text-black" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+                    <!-- Tab Belakang Folder -->
+                    <path d="M20 32 C20 28, 24 25, 28 25 L40 25 C44 25, 47 28, 50 31 L54 35 L72 35 C76 35, 80 38, 80 42 L80 45" />
+                    <!-- Body Depan Folder -->
+                    <path d="M22 38 L78 38 C82 38, 85 41, 84 45 L79 73 C78 77, 75 80, 70 80 L20 80 C15 80, 12 77, 13 73 L18 45 C19 41, 22 38, 22 38 Z" fill="white"/>
+                </svg>
+                <h2 class="text-3xl font-normal tracking-tight text-black font-sans -mt-2">datasettings</h2>
+            </div>
+
+            <!-- Banner Halo User (Background Hitam, Font Times New Roman Green) -->
+            <div class="w-full bg-black rounded-lg py-2.5 px-4 shadow-md border border-gray-800">
+                <p class="font-times text-green-400 text-lg sm:text-xl font-normal tracking-wide flex items-center justify-center space-x-2">
+                    <span>Halo</span>
+                    <span id="displayUsername" class="text-green-400 font-bold">user</span>
+                </p>
+            </div>
+
+            <!-- Feature Cards Container -->
+            <div class="w-full space-y-3.5">
+
+                <!-- Fitur 1: Activated datasettings -->
+                <div class="w-full border-2 border-black rounded-xl p-3.5 bg-white flex items-center justify-between shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
+                    <div class="w-9 h-9 flex items-center justify-center shrink-0">
+                        <svg class="w-7 h-7 text-black" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                    </div>
+                    <div class="px-2 text-center flex-1">
+                        <span class="text-sm font-bold text-black block leading-tight">Activated datasettings <br/><span class="text-xs font-semibold text-gray-700">(include 21+ data)</span></span>
+                    </div>
+                    <label class="relative inline-flex items-center cursor-pointer shrink-0">
+                        <input type="checkbox" id="feature1" class="sr-only peer" checked>
+                        <div class="w-11 h-6 bg-gray-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-emerald-500 border border-black"></div>
+                    </label>
+                </div>
+
+                <!-- Fitur 2: sensitivity booster xy -->
+                <div class="w-full border-2 border-black rounded-xl p-3.5 bg-white flex items-center justify-between shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
+                    <div class="w-9 h-9 flex items-center justify-center shrink-0">
+                        <svg class="w-7 h-7 text-black" viewBox="0 0 24 24" fill="white" stroke="currentColor" stroke-width="2">
+                            <rect x="6" y="3" width="12" height="18" rx="6" ry="6" fill="white" stroke="black" stroke-width="2" />
+                            <line x1="12" y1="3" x2="12" y2="9" stroke="black" stroke-width="2" />
+                        </svg>
+                    </div>
+                    <div class="px-2 text-center flex-1">
+                        <span class="text-sm font-bold text-black block">sensitivity booster xy</span>
+                    </div>
+                    <label class="relative inline-flex items-center cursor-pointer shrink-0">
+                        <input type="checkbox" id="feature2" class="sr-only peer">
+                        <div class="w-11 h-6 bg-gray-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-emerald-500 border border-black"></div>
+                    </label>
+                </div>
+
+                <!-- Fitur 3: Activated Headtrick -->
+                <div class="w-full border-2 border-black rounded-xl p-3.5 bg-white flex items-center justify-between shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
+                    <div class="w-9 h-9 flex items-center justify-center shrink-0">
+                        <svg class="w-7 h-7 text-black" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="7" stroke="black" stroke-width="2"></circle>
+                            <line x1="12" y1="2" x2="12" y2="6" stroke="black" stroke-width="2"></line>
+                            <line x1="12" y1="18" x2="12" y2="22" stroke="black" stroke-width="2"></line>
+                            <line x1="2" y1="12" x2="6" y2="12" stroke="black" stroke-width="2"></line>
+                            <line x1="18" y1="12" x2="22" y2="12" stroke="black" stroke-width="2"></line>
+                            <circle cx="12" cy="12" r="1.5" fill="black"></circle>
+                        </svg>
+                    </div>
+                    <div class="px-2 text-center flex-1">
+                        <span class="text-sm font-bold text-black block">Activated Headtrick</span>
+                    </div>
+                    <label class="relative inline-flex items-center cursor-pointer shrink-0">
+                        <input type="checkbox" id="feature3" class="sr-only peer" checked>
+                        <div class="w-11 h-6 bg-gray-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-emerald-500 border border-black"></div>
+                    </label>
+                </div>
+
+                <!-- Fitur 4: cache cleaner -->
+                <div class="w-full border-2 border-black rounded-xl p-3.5 bg-white flex items-center justify-between shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
+                    <div class="w-9 h-9 flex items-center justify-center shrink-0">
+                        <svg class="w-7 h-7 text-black" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path>
+                        </svg>
+                    </div>
+                    <div class="px-2 text-center flex-1">
+                        <span class="text-sm font-bold text-black block">cache cleaner</span>
+                    </div>
+                    <label class="relative inline-flex items-center cursor-pointer shrink-0">
+                        <input type="checkbox" id="feature4" class="sr-only peer">
+                        <div class="w-11 h-6 bg-gray-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-emerald-500 border border-black"></div>
+                    </label>
+                </div>
+
+            </div>
+
+            <!-- Tombol Apply -->
+            <div class="w-full pt-2">
+                <button 
+                    type="button" 
+                    onclick="applySettings()"
+                    class="w-full py-3.5 rounded-full border-2 border-black bg-white text-black font-black tracking-wider text-base uppercase hover:bg-black hover:text-white active:scale-95 transition-all duration-200 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]"
+                >
+                    APPLY
+                </button>
+            </div>
+
+            <!-- Logout Option -->
+            <button onclick="logout()" class="text-xs text-gray-500 underline hover:text-black font-medium pt-1">
+                Keluar / Ganti Akun
+            </button>
+
+        </section>
+
+    </main>
+
+    <!-- Footer Copyright -->
+    <footer class="w-full text-center py-4 text-xs font-semibold text-black tracking-wide border-t border-gray-100 mt-auto">
+        copyright sugaheavenâ€™s
+    </footer>
+
+    <!-- Notification Toast Element -->
+    <div id="toast" class="fixed bottom-12 left-1/2 transform -translate-x-1/2 bg-black text-white px-5 py-3 rounded-xl border-2 border-white shadow-2xl text-xs font-bold transition-opacity duration-300 opacity-0 pointer-events-none z-50 flex items-center space-x-2">
+        <span id="toastIcon">âœ…</span>
+        <span id="toastMessage">Pengaturan berhasil diterapkan!</span>
+    </div>
+
+    <!-- LOGIKA JAVASCRIPT & DAFTAR 150 KEY -->
+    <script>
+        // Array 150 Key Terdaftar Langsung di HTML
+        const validKeys = [
+            "DS-SUGA-1001", "DS-SUGA-1002", "DS-SUGA-1003", "DS-SUGA-1004", "DS-SUGA-1005",
+            "DS-SUGA-1006", "DS-SUGA-1007", "DS-SUGA-1008", "DS-SUGA-1009", "DS-SUGA-1010",
+            "DS-SUGA-1011", "DS-SUGA-1012", "DS-SUGA-1013", "DS-SUGA-1014", "DS-SUGA-1015",
+            "DS-SUGA-1016", "DS-SUGA-1017", "DS-SUGA-1018", "DS-SUGA-1019", "DS-SUGA-1020",
+            "DS-SUGA-1021", "DS-SUGA-1022", "DS-SUGA-1023", "DS-SUGA-1024", "DS-SUGA-1025",
+            "DS-SUGA-1026", "DS-SUGA-1027", "DS-SUGA-1028", "DS-SUGA-1029", "DS-SUGA-1030",
+            "DS-SUGA-1031", "DS-SUGA-1032", "DS-SUGA-1033", "DS-SUGA-1034", "DS-SUGA-1035",
+            "DS-SUGA-1036", "DS-SUGA-1037", "DS-SUGA-1038", "DS-SUGA-1039", "DS-SUGA-1040",
+            "DS-SUGA-1041", "DS-SUGA-1042", "DS-SUGA-1043", "DS-SUGA-1044", "DS-SUGA-1045",
+            "DS-SUGA-1046", "DS-SUGA-1047", "DS-SUGA-1048", "DS-SUGA-1049", "DS-SUGA-1050",
+            "DS-SUGA-1051", "DS-SUGA-1052", "DS-SUGA-1053", "DS-SUGA-1054", "DS-SUGA-1055",
+            "DS-SUGA-1056", "DS-SUGA-1057", "DS-SUGA-1058", "DS-SUGA-1059", "DS-SUGA-1060",
+            "DS-SUGA-1061", "DS-SUGA-1062", "DS-SUGA-1063", "DS-SUGA-1064", "DS-SUGA-1065",
+            "DS-SUGA-1066", "DS-SUGA-1067", "DS-SUGA-1068", "DS-SUGA-1069", "DS-SUGA-1070",
+            "DS-SUGA-1071", "DS-SUGA-1072", "DS-SUGA-1073", "DS-SUGA-1074", "DS-SUGA-1075",
+            "DS-SUGA-1076", "DS-SUGA-1077", "DS-SUGA-1078", "DS-SUGA-1079", "DS-SUGA-1080",
+            "DS-SUGA-1081", "DS-SUGA-1082", "DS-SUGA-1083", "DS-SUGA-1084", "DS-SUGA-1085",
+            "DS-SUGA-1086", "DS-SUGA-1087", "DS-SUGA-1088", "DS-SUGA-1089", "DS-SUGA-1090",
+            "DS-SUGA-1091", "DS-SUGA-1092", "DS-SUGA-1093", "DS-SUGA-1094", "DS-SUGA-1095",
+            "DS-SUGA-1096", "DS-SUGA-1097", "DS-SUGA-1098", "DS-SUGA-1099", "DS-SUGA-1100",
+            "DS-KEY-8801", "DS-KEY-8802", "DS-KEY-8803", "DS-KEY-8804", "DS-KEY-8805",
+            "DS-KEY-8806", "DS-KEY-8807", "DS-KEY-8808", "DS-KEY-8809", "DS-KEY-8810",
+            "DS-KEY-8811", "DS-KEY-8812", "DS-KEY-8813", "DS-KEY-8814", "DS-KEY-8815",
+            "DS-KEY-8816", "DS-KEY-8817", "DS-KEY-8818", "DS-KEY-8819", "DS-KEY-8820",
+            "DS-KEY-8821", "DS-KEY-8822", "DS-KEY-8823", "DS-KEY-8824", "DS-KEY-8825",
+            "DS-KEY-8826", "DS-KEY-8827", "DS-KEY-8828", "DS-KEY-8829", "DS-KEY-8830",
+            "DS-KEY-8831", "DS-KEY-8832", "DS-KEY-8833", "DS-KEY-8834", "DS-KEY-8835",
+            "DS-KEY-8836", "DS-KEY-8837", "DS-KEY-8838", "DS-KEY-8839", "DS-KEY-8840",
+            "DS-KEY-8841", "DS-KEY-8842", "DS-KEY-8843", "DS-KEY-8844", "DS-KEY-8845",
+            "DS-KEY-8846", "DS-KEY-8847", "DS-KEY-8848", "DS-KEY-8849", "DS-KEY-8850"
+        ];
+
+        // Handle Login
+        function handleLogin(event) {
+            event.preventDefault();
+
+            const usernameInput = document.getElementById('username').value.trim();
+            const keyInput = document.getElementById('accessKey').value.trim().toUpperCase();
+
+            // Check jika key ada di dalam daftar validKeys
+            if (validKeys.includes(keyInput)) {
+                // Tampilkan notifikasi "berhasil aktivasi"
+                showToast('berhasil aktivasi', 'âœ…');
+
+                // Set username di dashboard
+                document.getElementById('displayUsername').innerText = usernameInput;
+
+                // Transisi ke tab dashboard setelah delay singkat
+                setTimeout(() => {
+                    document.getElementById('loginTab').classList.add('hidden');
+                    document.getElementById('dashboardTab').classList.remove('hidden');
+                    document.getElementById('dashboardTab').classList.add('flex');
+                }, 800);
+
+            } else {
+                // Tampilkan notifikasi "harap contact admin" jika key salah
+                showToast('harap contact admin', 'âŒ');
+            }
+        }
+
+        // Apply Settings Action
+        function applySettings() {
+            const f1 = document.getElementById('feature1').checked;
+            const f2 = document.getElementById('feature2').checked;
+            const f3 = document.getElementById('feature3').checked;
+            const f4 = document.getElementById('feature4').checked;
+
+            let activeCount = [f1, f2, f3, f4].filter(Boolean).length;
+
+            showToast(`Pengaturan Diaplikasikan! (${activeCount} Fitur Aktif)`, 'âš¡');
+        }
+
+        // Fungsi Logout
+        function logout() {
+            document.getElementById('dashboardTab').classList.add('hidden');
+            document.getElementById('dashboardTab').classList.remove('flex');
+            document.getElementById('loginTab').classList.remove('hidden');
+            document.getElementById('accessKey').value = '';
+            showToast('Anda telah keluar.', 'â„¹ï¸');
+        }
+
+        // Custom Toast Notification
+        function showToast(message, icon = 'âœ…') {
+            const toast = document.getElementById('toast');
+            document.getElementById('toastMessage').innerText = message;
+            document.getElementById('toastIcon').innerText = icon;
+
+            toast.classList.remove('opacity-0', 'pointer-events-none');
+            toast.classList.add('opacity-100');
+
+            setTimeout(() => {
+                toast.classList.remove('opacity-100');
+                toast.classList.add('opacity-0', 'pointer-events-none');
+            }, 2500);
+        }
+    </script>
+</body>
+</html>
